@@ -1,26 +1,11 @@
-/* .progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  z-index: 2000;
-  border-radius: 0;
-}
 
-.progress-bar {
-  transition: width 0.1s linear;
-} */
-
-
-/* Progress container */
 .progress.shooting-star {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
-  background: transparent;      /* invisible track */
+  height: 2px;
+  background: transparent;
   z-index: 3000;
   overflow: visible;
 }
@@ -40,16 +25,14 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-
   width: 14px;
-  height: 14px;
-  border-radius: 50%;
-
-  background: white;
+  height: 100px;
+  border-radius: 100px;
+  background: rgb(255, 208, 0);
   box-shadow:
-    0 0 6px white,
-    0 0 14px rgba(255, 255, 255, 0.9),
-    0 0 30px rgba(255, 255, 255, 0.6);
+    0 0 6px rgb(255, 214, 65),
+    0 0 14px rgba(255, 191, 71, 0.9),
+    0 0 30px rgba(255, 187, 0, 0.913);
 }
 
 /* TRAILING TAIL */
@@ -72,14 +55,9 @@
 
   filter: blur(2px);
 }
-
-
-/* ===========================
-   SECTION BASE
-=========================== */
 .index_section_1 {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.92);
   overflow: hidden;
@@ -108,11 +86,11 @@
 
 /* Logo */
 .logo_spinner {
+  margin-top:180px;
   width: 140px;
   height: 140px;
   border-radius: 50%;
   background: url("../assets/images/logo.png") center/cover no-repeat;
-
   opacity: 0;
   transform: scale(0.8);
   animation: logoFadeIn 0.8s ease-out forwards;
@@ -120,13 +98,13 @@
 }
 
 /* Moto */
-.company_moto {
+.company_moto h1{
   font-size: clamp(2.6rem, 4vw, 4.2rem);
   font-weight: 700;
   text-align: center;
-  color: #d2b48c;
-  letter-spacing: 1px;
-  max-width: 90%;
+  color: #ffbd59;
+  letter-spacing: 2px;
+  max-width: 100%;
 
   opacity: 0;
   transform: translateY(40px);
@@ -155,7 +133,7 @@
   width: 100%;
   height: 60px;
 
-  background: linear-gradient(145deg, #6f4e37, #3b2418);
+  background: linear-gradient(145deg, #ad6500, #f19600);
   border-radius: 16px;
   box-shadow: 0 12px 20px rgba(0,0,0,0.4);
 
@@ -167,9 +145,10 @@
   animation: fallAndStay 0.9s cubic-bezier(.25,.8,.25,1) forwards;
 }
 .box a {
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 600;
-  letter-spacing: 0.4px;
+  font-size:24px;
+  letter-spacing: 1px;
   text-decoration: none;
 }
 
@@ -179,25 +158,6 @@
 .b3 { bottom: 140px; animation-delay: 1.2s; }
 .b4 { bottom: 210px; animation-delay: 1.8s; }
 .b5 { bottom: 280px; animation-delay: 2.4s; }
-/* ===========================
-   ANIMATIONS
-=========================== */
-/* @keyframes fallAndStay {
-  0% {
-    transform: translateY(-300px);
-    opacity: 0;
-  }
-
-  70% {
-    transform: translateY(10px); 
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-} */
 
 @keyframes logoFadeIn {
   to {
@@ -212,77 +172,9 @@
     transform: translateY(0);
   }
 }
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-@media (max-width: 900px) {
-  .section_1_grid_1 {
-    grid-template-columns: 1fr;
-  }
-
-  .section_1_grid_12 {
-    display: none;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .index_section_1 {
-    position: relative;
-    width: 100vw;
-    height: 100vh; 
-    background:rgba(0, 0, 0, 0.90);
-    overflow: hidden;
-}
-.section_1_grid_1{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:auto;
-    width:100%;
-    height:100%;
-    padding:0px 20px 0px 20px;
-}
-.section_1_grid_11{
-    display:grid;
-    grid-template-columns:auto;
-    grid-template-rows:1fr 1fr;
-    width:100%;
-    height:100%;
-}
-.section_1_grid_12{
-    display:block;
-    width:100%;
-    height:100%;
-} */
-
 main {
   margin-top: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ===============================
    SECTION BASE
 ================================ */
@@ -545,3 +437,12 @@ main {
   font-weight: 500;
 }
 
+@media (max-width: 900px) {
+  .section_1_grid_1 {
+    grid-template-columns: 1fr;
+  }
+
+  .section_1_grid_12 {
+    display: none;
+  }
+}
